@@ -1,0 +1,24 @@
+
+---
+
+### **`.gitignore`**
+```gitignore
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Node.js dependencies (if using any for automation)
+node_modules/
+package-lock.json
+
+# Ignore build files
+dist/
+build/
+
+# Ignore IDE settings
+.vscode/
+.idea/
+
+# Ignore deployment & env files
+.env
+*.log
