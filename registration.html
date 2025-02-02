@@ -128,8 +128,7 @@
     <!-- end page title -->
     <!-- start section -->
     <section
-      class="pt-0 half-section d-none d-md-block"
-      style="background-image: url(images/demo-3d-parallax-bg.jpg)"
+      class="pt-0 half-section d-none d-md-block bg-midnight-blue"
     >
       <div class="container-fluid">
         <div class="row">
@@ -148,8 +147,107 @@
       </div>
     </section>
     <!-- end section -->
+     <!-- start section -->
+    <section class="bg-midnight-blue pt-4" id="register-form">
+        <div class="container">
+          <div
+            class="row justify-content-center mb-3 xs-mb-8"
+            data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+          >
+            <div class="col-xl-7 col-lg-8 text-center">
+              <h2 class="alt-font text-white fw-500 ls-minus-2px">
+                <span
+                  class="w-20px h-4px d-inline-block bg-base-color me-10px"
+                ></span
+                >Register now and be a part of the tournament.
+              </h2>
+            </div>
+          </div>
+          <div
+            class="row row-cols-md-1 justify-content-center"
+            data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'
+          >
+            <div class="col-xl-9 col-lg-11">
+              <!-- start contact form -->
+              <form
+                action="email-templates/contact-form.php"
+                method="post"
+                class="row contact-form-style-02"
+              >
+                <div class="col-md-6 mb-30px">
+                  <input
+                    class="input-name bg-transparent border-color-transparent-white-light form-control required"
+                    type="text"
+                    name="name"
+                    placeholder="Your name*"
+                  />
+                </div>
+                <div class="col-md-6 mb-30px">
+                  <input
+                    class="bg-transparent border-color-transparent-white-light form-control required"
+                    type="email"
+                    name="email"
+                    placeholder="Your email address*"
+                  />
+                </div>
+                <div class="col-md-6 mb-30px">
+                  <input
+                    class="bg-transparent border-color-transparent-white-light form-control"
+                    type="tel"
+                    name="phone"
+                    placeholder="Your phone"
+                  />
+                </div>
+                <div class="col-md-6 mb-30px">
+                  <input
+                    class="bg-transparent border-color-transparent-white-light form-control"
+                    type="text"
+                    name="subject"
+                    name="subject"
+                    placeholder="Group/Team name"
+                  />
+                </div>
+                <div class="col-md-12 mb-40px">
+                  <textarea
+                    class="bg-transparent border-color-transparent-white-light form-control"
+                    cols="40"
+                    rows="4"
+                    name="comment"
+                    placeholder="Please Include the names of all golfers in your group, and any special requests or accommodations needed."
+                  ></textarea>
+                </div>
+                <div class="col-lg-7 col-md-8">
+                  <p class="mb-0 lh-30 text-center text-md-start fs-16">
+                    Upon submission, you will be responsible for payment to complete your registration. Payment can be made via Venmo using the QR code or link provided. If you have any questions, please contact us at
+                    <a href="mailto:andoverapacheswc@gmail.com">AndoverApachesWC</a>.
+                  </p>
+                </div>
+                <div class="col-lg-5 col-md-4 text-center text-md-end sm-mt-20px">
+                  <input type="hidden" name="redirect" value="" />
+                  <button
+                    class="btn btn-medium btn-base-color btn-hover-animation btn-round-edge btn-box-shadow align-self-center submit"
+                    type="submit"
+                  >
+                    <span>
+                      <span class="btn-text">Submit</span>
+                      <span class="btn-icon"
+                        ><i class="fa-solid fa-arrow-right"></i
+                      ></span>
+                    </span>
+                  </button>
+                </div>
+                <div class="col-12">
+                  <div class="form-results mt-20px d-none"></div>
+                </div>
+              </form>
+              <!-- end contact form -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section -->
     <!-- start section -->
-    <section class="pt-0 sm-pt-50px overflow-hidden" style="background-image: url(images/demo-3d-parallax-bg.jpg)"">
+    <section class="pt-4 sm-pt-50px overflow-hidden" style="background-image: url(images/demo-3d-parallax-bg.jpg)"">
       <div class="container">
         <div
           class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center"
@@ -214,7 +312,7 @@
                     class="line-icon-Headset icon-extra-large text-base-color mb-25px"
                   ></i>
                   <div class="fs-20 text-white mb-5px">Let's talk</div>
-                  <span class="d-block m-auto">Feel free to get in touch?</span>
+                  <span class="d-block m-auto">Need to get in touch?</span>
                   <span class="d-block m-auto">Give us a call toady.</span>
                 </div>
               </div>
@@ -231,7 +329,7 @@
                   class="d-flex flex-column align-items-center justify-content-center h-100 z-index-2 rotate-content-back p-15"
                 >
                   <a
-                    href="tel:+1-800-222-000"
+                    href="tel:+1-443-848-1322"
                     class="btn btn-large btn-dark-gray btn-hover-animation btn-round-edge btn-box-shadow align-self-center"
                   >
                     <span>
@@ -276,11 +374,11 @@
                   class="d-flex flex-column align-items-center justify-content-center h-100 z-index-2 rotate-content-back p-15"
                 >
                   <a
-                    href="mailto:info@yourdomain.com"
+                    href="mailto:andoverapacheswc@gmail.com"
                     class="btn btn-large btn-dark-gray btn-hover-animation btn-round-edge btn-box-shadow align-self-center"
                   >
                     <span>
-                      <span class="btn-text">Email Us</span>
+                      <span class="btn-text">Email</span>
                       <span class="btn-icon"
                         ><i class="fa-solid fa-arrow-right"></i
                       ></span>
@@ -292,105 +390,6 @@
             </div>
           </div>
           <!-- end rotate box item -->
-        </div>
-      </div>
-    </section>
-    <!-- end section -->
-    <!-- start section -->
-    <section class="bg-midnight-blue pt-10" id="register-form">
-      <div class="container">
-        <div
-          class="row justify-content-center mb-3 xs-mb-8"
-          data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
-        >
-          <div class="col-xl-7 col-lg-8 text-center">
-            <h2 class="alt-font text-white fw-500 ls-minus-2px">
-              <span
-                class="w-20px h-4px d-inline-block bg-base-color me-10px"
-              ></span
-              >Register now and be a part of the tournament.
-            </h2>
-          </div>
-        </div>
-        <div
-          class="row row-cols-md-1 justify-content-center"
-          data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'
-        >
-          <div class="col-xl-9 col-lg-11">
-            <!-- start contact form -->
-            <form
-              action="email-templates/contact-form.php"
-              method="post"
-              class="row contact-form-style-02"
-            >
-              <div class="col-md-6 mb-30px">
-                <input
-                  class="input-name bg-transparent border-color-transparent-white-light form-control required"
-                  type="text"
-                  name="name"
-                  placeholder="Your name*"
-                />
-              </div>
-              <div class="col-md-6 mb-30px">
-                <input
-                  class="bg-transparent border-color-transparent-white-light form-control required"
-                  type="email"
-                  name="email"
-                  placeholder="Your email address*"
-                />
-              </div>
-              <div class="col-md-6 mb-30px">
-                <input
-                  class="bg-transparent border-color-transparent-white-light form-control"
-                  type="tel"
-                  name="phone"
-                  placeholder="Your phone"
-                />
-              </div>
-              <div class="col-md-6 mb-30px">
-                <input
-                  class="bg-transparent border-color-transparent-white-light form-control"
-                  type="text"
-                  name="subject"
-                  name="subject"
-                  placeholder="Your subject"
-                />
-              </div>
-              <div class="col-md-12 mb-40px">
-                <textarea
-                  class="bg-transparent border-color-transparent-white-light form-control"
-                  cols="40"
-                  rows="4"
-                  name="comment"
-                  placeholder="Please Include the names of all golfers in your group, and any special requests or accommodations needed."
-                ></textarea>
-              </div>
-              <div class="col-lg-7 col-md-8">
-                <p class="mb-0 lh-30 text-center text-md-start fs-16">
-                  Upon submission, you will be responsible for payment to complete your registration. Payment can be made via Venmo using the QR code or link provided. If you have any questions, please contact us at
-                  <a href="mailto:info@yourdomain.com">info@yourdomain.com</a>.
-                </p>
-              </div>
-              <div class="col-lg-5 col-md-4 text-center text-md-end sm-mt-20px">
-                <input type="hidden" name="redirect" value="" />
-                <button
-                  class="btn btn-medium btn-base-color btn-hover-animation btn-round-edge btn-box-shadow align-self-center submit"
-                  type="submit"
-                >
-                  <span>
-                    <span class="btn-text">Submit</span>
-                    <span class="btn-icon"
-                      ><i class="fa-solid fa-arrow-right"></i
-                    ></span>
-                  </span>
-                </button>
-              </div>
-              <div class="col-12">
-                <div class="form-results mt-20px d-none"></div>
-              </div>
-            </form>
-            <!-- end contact form -->
-          </div>
         </div>
       </div>
     </section>
@@ -448,7 +447,7 @@
                             class="feather icon-feather-minus body-text-color"
                           ></i
                           ><span class="fs-18 text-black"
-                            >Can I pay cash at the event?</span
+                            >What if I don’t have a Venmo account?</span
                           >
                         </div>
                       </a>
@@ -462,8 +461,9 @@
                         class="accordion-body last-paragraph-no-margin border-bottom border-color-transparent-white-light text-medium-gray"
                       >
                         <p>
-                          Lorem ipsum is simply dummy text of typesetting
-                          industry. standard dummy text.
+                            Alternative payment methods will be accepted. Please reach out to Ryan Saumenig at <a href="tel: +1-443-848-1322">(443)848-1322</a> or via <a href="mailto:andoverapacheswc@gmail.com" 
+                            >Email</a
+                          > to make alternative payment arrangements.
                         </p>
                       </div>
                     </div>
@@ -486,7 +486,7 @@
                             class="feather icon-feather-plus body-text-color"
                           ></i
                           ><span class="fs-18 text-black"
-                            >What are my payment options?</span
+                            >What food and beverages are available during the tournament?</span
                           >
                         </div>
                       </a>
@@ -500,8 +500,7 @@
                         class="accordion-body last-paragraph-no-margin border-bottom border-color-transparent-white-light text-medium-gray"
                       >
                         <p>
-                          Lorem ipsum is simply dummy text of typesetting
-                          industry. standard dummy text.
+                            A breakfast of donuts, muffins, juice and coffee will be available during registration. Drinks are available throughout the event. Available beverages are assorted sodas, water, Gatorade, domestic beer and seltzers.  A BBQ lunch will follow with Braised Beef Brisket, Pulled BBQ Chicken, Baked Beans, Green Beans, Potato Salad, Cole Slaw with all the fixin’s and sweets for dessert. All food and beverage items listed above are available at no cost to tournament participants. Other premium beverage options not mentioned above are available for purchase at the bar.
                         </p>
                       </div>
                     </div>
@@ -524,7 +523,7 @@
                             class="feather icon-feather-plus body-text-color"
                           ></i
                           ><span class="fs-18 text-black"
-                            >Some other Question?</span
+                            >How long does the tournament last?</span
                           >
                         </div>
                       </a>
@@ -538,8 +537,155 @@
                         class="accordion-body last-paragraph-no-margin border-bottom border-color-transparent text-medium-gray"
                       >
                         <p>
-                          Lorem ipsum is simply dummy text of typesetting
-                          industry. standard dummy text.
+                            Registration will start at 7:30am with golf starting at 9:00am. Depending on final count of golfers, the tournament should wrap up around 2:00pm with a lunch to follow. All raffles and prizes will be announced during the lunch following the tournament.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end accordion item -->
+                   <!-- start accordion item -->
+                  <div class="accordion-item">
+                    <div
+                      class="accordion-header border-bottom border-color-transparent"
+                    >
+                      <a
+                        href=""
+                        data-bs-toggle="collapse"
+                        data-bs-target="#accordion-style-02-04"
+                        aria-expanded="false"
+                        data-bs-parent="#accordion-style-02"
+                      >
+                        <div class="accordion-title mb-0 position-relative">
+                          <i
+                            class="feather icon-feather-plus body-text-color"
+                          ></i
+                          ><span class="fs-18 text-black"
+                            >How will the raffles work?</span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                    <div
+                      id="accordion-style-02-04"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordion-style-02"
+                    >
+                      <div
+                        class="accordion-body last-paragraph-no-margin border-bottom border-color-transparent text-medium-gray"
+                      >
+                        <p>
+                            Raffle tickets for the raffles will be available starting during registration. Venmo or cash will be accepted to purchase the raffle tickets. There will also be volunteers driving around on a golf cart throughout the tournament offering raffle tickets. Drawings for the raffle will occur during the lunch after the tournament.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end accordion item -->
+                   <!-- start accordion item -->
+                  <div class="accordion-item">
+                    <div
+                      class="accordion-header border-bottom border-color-transparent"
+                    >
+                      <a
+                        href=""
+                        data-bs-toggle="collapse"
+                        data-bs-target="#accordion-style-02-05"
+                        aria-expanded="false"
+                        data-bs-parent="#accordion-style-02"
+                      >
+                        <div class="accordion-title mb-0 position-relative">
+                          <i
+                            class="feather icon-feather-plus body-text-color"
+                          ></i
+                          ><span class="fs-18 text-black"
+                            >What if I don’t have a foursome, can I still participate?</span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                    <div
+                      id="accordion-style-02-05"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordion-style-02"
+                    >
+                      <div
+                        class="accordion-body last-paragraph-no-margin border-bottom border-color-transparent text-medium-gray"
+                      >
+                        <p>
+                            Yes, you can register as an individual or as a group of two, three or four. No more than four participants can be grouped together at one time. If you have two groups, please register each group separately with a comment on the registration form that you would like to be lined up together. Groups of two and three may be paired together with other individuals or small groups to make a foursome.  
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end accordion item -->
+                   <!-- start accordion item -->
+                  <div class="accordion-item">
+                    <div
+                      class="accordion-header border-bottom border-color-transparent"
+                    >
+                      <a
+                        href=""
+                        data-bs-toggle="collapse"
+                        data-bs-target="#accordion-style-02-06"
+                        aria-expanded="false"
+                        data-bs-parent="#accordion-style-02"
+                      >
+                        <div class="accordion-title mb-0 position-relative">
+                          <i
+                            class="feather icon-feather-plus body-text-color"
+                          ></i
+                          ><span class="fs-18 text-black"
+                            >What if the weather doesn’t cooperate?</span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                    <div
+                      id="accordion-style-02-06"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordion-style-02"
+                    >
+                      <div
+                        class="accordion-body last-paragraph-no-margin border-bottom border-color-transparent text-medium-gray"
+                      >
+                        <p>
+                            Golf tournaments are “Rain or Shine” events. In cases of severe weather where the course is completely closed, tournament directors will work with Bay Hills to reschedule on an alternative date.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end accordion item -->
+                   <!-- start accordion item -->
+                  <div class="accordion-item">
+                    <div
+                      class="accordion-header border-bottom border-color-transparent"
+                    >
+                      <a
+                        href=""
+                        data-bs-toggle="collapse"
+                        data-bs-target="#accordion-style-02-07"
+                        aria-expanded="false"
+                        data-bs-parent="#accordion-style-02"
+                      >
+                        <div class="accordion-title mb-0 position-relative">
+                          <i
+                            class="feather icon-feather-plus body-text-color"
+                          ></i
+                          ><span class="fs-18 text-black"
+                            >What style of golf will be played?</span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                    <div
+                      id="accordion-style-02-07"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordion-style-02"
+                    >
+                      <div
+                        class="accordion-body last-paragraph-no-margin border-bottom border-color-transparent text-medium-gray"
+                      >
+                        <p>
+                            The tournament will be arranged as a “Shot Gun” start which means each team will start on a designated hole and golf on each hole until all 18 holes have been played. This is a “Scramble” tournament meaning teammates all hit tee shots, choose the best one to play, then all hit shots from that spot. Repeat for the whole round.
                         </p>
                       </div>
                     </div>
@@ -582,15 +728,14 @@
                     ></i>
                     Contact Us
                   </h4>
-                  <a href="mailto:info@yourdomain.com" class="d-block"
-                    >info@yourdomain.com</a
+                  <a href="mailto:andoverapacheswc@gmail.com" class="d-block"
+                    ><i
+                    class="feather icon-feather-mail p-2"
+                  ></i>Andover Apaches Wrestling Club</a
                   >
-                  <a href="tel:1800222000" class="d-block mb-2">1-800-222-000</a>
-                  <a
-                    href="#"
-                    class="text-decoration-line-bottom text-uppercase fs-15 alt-font fw-500"
-                    >Call to Event</a
-                  >
+                  <a href="tel: +1-443-848-1322" class="d-block mb-2"><i
+                    class="feather icon-feather-phone-call p-2"
+                  ></i>Call Us</a>
                 </div>
               </div>
       
