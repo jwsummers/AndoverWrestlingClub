@@ -149,6 +149,24 @@ html {
     margin-top: 10px;
     border-radius: 8px;
   }
+
+  .btn-custom {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #F06F09;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-custom:hover {
+    background-color: #d95a06;
+  }
+  
   
 /* model popup */
 .my-mfp-zoom-in.mfp-ready.mfp-bg {
