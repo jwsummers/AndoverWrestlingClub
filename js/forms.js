@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Select both forms by a common class (adjust selector if needed)
   const forms = document.querySelectorAll('form.contact-form-style-02');
 
   forms.forEach((form) => {
@@ -13,22 +12,26 @@ document.addEventListener('DOMContentLoaded', function () {
             action: 'submit',
           })
           .then(async function (token) {
-            // Debug: Log the reCAPTCHA token
             console.log('reCAPTCHA token received:', token);
             if (!token) {
-              console.error('No reCAPTCHA token generated!');
+              console.error('No token generated!');
             }
 
-            // Append the token to the form data and add a timestamp for anti-spam
+            // Append token and timestamp to the form data
             let formData = new FormData(form);
             formData.append('g-recaptcha-response', token);
-            formData.append('formTimestamp', Date.now());
+            const timestamp = Date.now();
+            formData.append('formTimestamp', timestamp);
 
-            // Debug: Log all formData entries
-            console.log('Form Data Entries:');
-            for (let [key, value] of formData.entries()) {
-              console.log(key + ': ' + value);
-            }
+            // Debug: Log appended values directly from FormData
+            console.log(
+              'g-recaptcha-response in FormData:',
+              formData.get('g-recaptcha-response')
+            );
+            console.log(
+              'formTimestamp in FormData:',
+              formData.get('formTimestamp')
+            );
 
             // Convert FormData to a plain object
             const data = {};
@@ -36,10 +39,8 @@ document.addEventListener('DOMContentLoaded', function () {
               data[key] = value;
             });
 
-            // Debug: Log the data object that will be sent
             console.log('Data object to be sent:', data);
 
-            // Send the form data to your Netlify function endpoint
             try {
               const response = await fetch('/.netlify/functions/sendEmail', {
                 method: 'POST',
@@ -49,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
               const result = await response.json();
               console.log('Network response:', result);
-
               const formResults = form.querySelector('.form-results');
 
               if (response.ok) {
@@ -58,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 formResults.classList.add('alert', 'alert-success');
                 form.reset();
 
-                // If this is the sponsor form, prompt for logo upload
                 if (data.formType === 'sponsor') {
                   showLogoUploadModal();
                 }
@@ -81,9 +80,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Custom modal to prompt logo upload for sponsor form
+  // Custom modal function for sponsor forms...
   function showLogoUploadModal() {
-    // Create modal elements (or assume you have them in your HTML already and just show/hide)
+    // (Modal code remains unchanged)
     const modalOverlay = document.createElement('div');
     modalOverlay.id = 'logoUploadModal';
     modalOverlay.style.position = 'fixed';
@@ -117,9 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
     modalOverlay.appendChild(modalContent);
     document.body.appendChild(modalOverlay);
 
-    // Add event listeners to modal buttons
     document.getElementById('modalYes').addEventListener('click', function () {
-      // Open mailto link with pre-filled subject and body
       window.location.href =
         'mailto:andoverapacheswc@gmail.com?subject=Logo Submission for Sponsorship&body=Hello,%0D%0A%0D%0APlease attach your company logo image for my sponsorship application.%0D%0A%0D%0AThank you.';
       closeModal();
