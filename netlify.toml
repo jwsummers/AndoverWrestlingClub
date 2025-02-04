@@ -1,0 +1,9 @@
+[build]
+  command = ""
+
+  publish = "."
+
+  functions = "netlify/functions"
+
+[context.production.environment]
+  NODE_ENV = "production"
