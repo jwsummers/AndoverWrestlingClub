@@ -13,16 +13,31 @@ document.addEventListener('DOMContentLoaded', function () {
             action: 'submit',
           })
           .then(async function (token) {
-            // Append the token to the form data
+            // Debug: Log the reCAPTCHA token
+            console.log('reCAPTCHA token received:', token);
+            if (!token) {
+              console.error('No reCAPTCHA token generated!');
+            }
+
+            // Append the token to the form data and add a timestamp for anti-spam
             let formData = new FormData(form);
             formData.append('g-recaptcha-response', token);
             formData.append('formTimestamp', Date.now());
+
+            // Debug: Log all formData entries
+            console.log('Form Data Entries:');
+            for (let [key, value] of formData.entries()) {
+              console.log(key + ': ' + value);
+            }
 
             // Convert FormData to a plain object
             const data = {};
             formData.forEach((value, key) => {
               data[key] = value;
             });
+
+            // Debug: Log the data object that will be sent
+            console.log('Data object to be sent:', data);
 
             // Send the form data to your Netlify function endpoint
             try {
@@ -33,6 +48,8 @@ document.addEventListener('DOMContentLoaded', function () {
               });
 
               const result = await response.json();
+              console.log('Network response:', result);
+
               const formResults = form.querySelector('.form-results');
 
               if (response.ok) {
@@ -89,13 +106,13 @@ document.addEventListener('DOMContentLoaded', function () {
     modalContent.style.width = '90%';
 
     modalContent.innerHTML = `
-        <h3 class="alt-font">Upload Your Logo</h3>
-        <p>Would you like to upload an image of your company logo now? This will open your email client with a pre-populated message for you to attach your logo.</p>
-        <div style="margin-top: 20px;">
-          <button id="modalYes" class="btn btn-base-color btn-round-edge" style="margin-right: 10px;">Yes</button>
-          <button id="modalNo" class="btn btn-dark-gray btn-round-edge">No</button>
-        </div>
-      `;
+          <h3 class="alt-font">Upload Your Logo</h3>
+          <p>Would you like to upload an image of your company logo now? This will open your email client with a pre-populated message for you to attach your logo.</p>
+          <div style="margin-top: 20px;">
+            <button id="modalYes" class="btn btn-base-color btn-round-edge" style="margin-right: 10px;">Yes</button>
+            <button id="modalNo" class="btn btn-dark-gray btn-round-edge">No</button>
+          </div>
+        `;
 
     modalOverlay.appendChild(modalContent);
     document.body.appendChild(modalOverlay);
