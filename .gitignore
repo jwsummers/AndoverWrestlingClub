@@ -22,3 +22,6 @@ build/
 # Ignore deployment & env files
 .env
 *.log
+
+# Local Netlify folder
+.netlify

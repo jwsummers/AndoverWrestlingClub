@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html class="no-js" lang="en">
   <head>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcuEswqAAAAAMDQDdV8--Wff96Ub970YjoTqBck"></script>
     <title>Andover Wrestling | 2nd Annual Golf Tournament</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -304,11 +305,28 @@
           <div class="col-xl-9 col-lg-11">
             <!-- start contact form -->
             <form
-              action="email-templates/contact-form.php"
+              action="/.netlify/functions/sendEmail"
               method="post"
               class="row contact-form-style-02"
               enctype="multipart/form-data"
             >
+              <!-- Identify form type -->
+              <input type="hidden" name="formType" value="sponsor" />
+              <!-- Form timestamp (to be set by JS) -->
+              <input type="hidden" name="formTimestamp" value="" />
+              <!-- Honeypot field (should remain empty) -->
+              <div style="display: none">
+                <label for="website">Leave this field empty</label>
+                <input
+                  type="text"
+                  id="website"
+                  name="website"
+                  value=""
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+              </div>
+
               <div class="col-md-6 mb-30px">
                 <input
                   class="input-name bg-transparent border-color-transparent-white-light form-control required"
@@ -360,26 +378,15 @@
                   </option>
                 </select>
               </div>
-              <!-- Company Logo Upload -->
-              <div class="file-upload col-md-6 mb-30px">
-                <input
-                  type="file"
-                  id="companyLogo"
-                  name="company_logo"
-                  accept="image/*"
-                  class="d-none"
-                />
-                <label for="companyLogo" class="btn-custom"
-                  >Upload Company Logo</label
-                >
-              </div>
+              <!-- Company Logo Upload Field Removed -->
+
               <div class="col-md-12 mb-40px">
                 <textarea
                   class="bg-transparent border-color-transparent-white-light form-control"
                   cols="40"
                   rows="4"
                   name="comment"
-                  placeholder="Please Include questions or comments here"
+                  placeholder="Please include any questions or comments here. If you'd like your company logo to be featured, please email an image of your logo separately to andoverapacheswc@gmail.com."
                 ></textarea>
               </div>
               <div class="col-lg-7 col-md-8">

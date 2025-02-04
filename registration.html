@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html class="no-js" lang="en">
   <head>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcuEswqAAAAAMDQDdV8--Wff96Ub970YjoTqBck"></script>
     <title>Andover Wrestling | 2nd Annual Golf Tournament</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -169,81 +170,85 @@
           >
             <div class="col-xl-9 col-lg-11">
               <!-- start contact form -->
-              <form
-                action="email-templates/contact-form.php"
-                method="post"
-                class="row contact-form-style-02"
-              >
-                <div class="col-md-6 mb-30px">
-                  <input
-                    class="input-name bg-transparent border-color-transparent-white-light form-control required"
-                    type="text"
-                    name="name"
-                    placeholder="Your name*"
-                  />
-                </div>
-                <div class="col-md-6 mb-30px">
-                  <input
-                    class="bg-transparent border-color-transparent-white-light form-control required"
-                    type="email"
-                    name="email"
-                    placeholder="Your email address*"
-                  />
-                </div>
-                <div class="col-md-6 mb-30px">
-                  <input
-                    class="bg-transparent border-color-transparent-white-light form-control"
-                    type="tel"
-                    name="phone"
-                    placeholder="Your phone"
-                  />
-                </div>
-                <div class="col-md-6 mb-30px">
-                  <input
-                    class="bg-transparent border-color-transparent-white-light form-control"
-                    type="text"
-                    name="subject"
-                    name="subject"
-                    placeholder="Group/Team name"
-                  />
-                </div>
-                <div class="col-md-12 mb-40px">
-                  <textarea
-                    class="bg-transparent border-color-transparent-white-light form-control"
-                    cols="40"
-                    rows="4"
-                    name="comment"
-                    placeholder="Please Include the names of all golfers in your group, and any special requests or accommodations needed."
-                  ></textarea>
-                </div>
-                <div class="col-lg-7 col-md-8">
-                  <p class="mb-0 lh-30 text-center text-md-start fs-16">
-                    Upon submission, you will be responsible for payment to complete your registration. Payment can be made via <a href="https://account.venmo.com/u/andoverwrestlingclub" target="_blank"
-                    >Venmo</a
-                  >
-                  using the <a href="/index.html#venmo">QR</a> or link provided. If you have any questions or would like to inquire about alternative payment methods, please contact us at
-                    <a href="mailto:andoverapacheswc@gmail.com">AndoverApachesWC</a>.
-                  </p>
-                </div>
-                <div class="col-lg-5 col-md-4 text-center text-md-end sm-mt-20px">
-                  <input type="hidden" name="redirect" value="" />
-                  <button
-                    class="btn btn-medium btn-base-color btn-hover-animation btn-round-edge btn-box-shadow align-self-center submit"
-                    type="submit"
-                  >
-                    <span>
-                      <span class="btn-text">Submit</span>
-                      <span class="btn-icon"
-                        ><i class="fa-solid fa-arrow-right"></i
-                      ></span>
-                    </span>
-                  </button>
-                </div>
-                <div class="col-12">
-                  <div class="form-results mt-20px d-none"></div>
-                </div>
-              </form>
-              <!-- end contact form -->
+<form
+action="/.netlify/functions/sendEmail"
+method="post"
+class="row contact-form-style-02"
+>
+<!-- Identify form type -->
+<input type="hidden" name="formType" value="register" />
+<!-- Form timestamp: will be set by JS -->
+<input type="hidden" name="formTimestamp" value="" />
+<!-- Honeypot field (should remain empty) -->
+<div style="display:none;">
+  <label for="website">Leave this field empty</label>
+  <input type="text" id="website" name="website" value="" tabindex="-1" autocomplete="off" />
+</div>
+
+<div class="col-md-6 mb-30px">
+  <input
+    class="input-name bg-transparent border-color-transparent-white-light form-control required"
+    type="text"
+    name="name"
+    placeholder="Your name*"
+  />
+</div>
+<div class="col-md-6 mb-30px">
+  <input
+    class="bg-transparent border-color-transparent-white-light form-control required"
+    type="email"
+    name="email"
+    placeholder="Your email address*"
+  />
+</div>
+<div class="col-md-6 mb-30px">
+  <input
+    class="bg-transparent border-color-transparent-white-light form-control"
+    type="tel"
+    name="phone"
+    placeholder="Your phone"
+  />
+</div>
+<div class="col-md-6 mb-30px">
+  <input
+    class="bg-transparent border-color-transparent-white-light form-control"
+    type="text"
+    name="subject"
+    placeholder="Group/Team name"
+  />
+</div>
+<div class="col-md-12 mb-40px">
+  <textarea
+    class="bg-transparent border-color-transparent-white-light form-control"
+    cols="40"
+    rows="4"
+    name="comment"
+    placeholder="Please Include the names of all golfers in your group, and any special requests or accommodations needed."
+  ></textarea>
+</div>
+<div class="col-lg-7 col-md-8">
+  <p class="mb-0 lh-30 text-center text-md-start fs-16">
+    Upon submission, you will be responsible for payment to complete your registration. Payment can be made via <a href="https://account.venmo.com/u/andoverwrestlingclub" target="_blank">Venmo</a> using the <a href="/index.html#venmo">QR</a> or link provided. If you have any questions or would like to inquire about alternative payment methods, please contact us at <a href="mailto:andoverapacheswc@gmail.com">AndoverApachesWC</a>.
+  </p>
+</div>
+<div class="col-lg-5 col-md-4 text-center text-md-end sm-mt-20px">
+  <input type="hidden" name="redirect" value="" />
+  <button
+    class="btn btn-medium btn-base-color btn-hover-animation btn-round-edge btn-box-shadow align-self-center submit"
+    type="submit"
+  >
+    <span>
+      <span class="btn-text">Submit</span>
+      <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+    </span>
+  </button>
+</div>
+<div class="col-12">
+  <div class="form-results mt-20px d-none"></div>
+</div>
+</form>
+<!-- end contact form -->
+
             </div>
           </div>
         </div>
