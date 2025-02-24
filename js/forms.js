@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
             action: 'submit',
           })
           .then(async function (token) {
-            console.log('reCAPTCHA token received:', token);
             if (!token) {
               console.error('No token generated!');
             }
@@ -23,23 +22,11 @@ document.addEventListener('DOMContentLoaded', function () {
             const timestamp = Date.now();
             formData.append('formTimestamp', timestamp);
 
-            // Debug: Log appended values directly from FormData
-            console.log(
-              'g-recaptcha-response in FormData:',
-              formData.get('g-recaptcha-response')
-            );
-            console.log(
-              'formTimestamp in FormData:',
-              formData.get('formTimestamp')
-            );
-
             // Convert FormData to a plain object
             const data = {};
             formData.forEach((value, key) => {
               data[key] = value;
             });
-
-            console.log('Data object to be sent:', data);
 
             try {
               const response = await fetch('/.netlify/functions/sendEmail', {
