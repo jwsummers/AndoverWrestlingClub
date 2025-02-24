@@ -3,7 +3,6 @@ const querystring = require('querystring');
 const axios = require('axios');
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-const pageLoadTime = Date.now();
 
 exports.handler = async (event) => {
   // Only allow POST requests
@@ -33,20 +32,6 @@ exports.handler = async (event) => {
       return {
         statusCode: 400,
         body: JSON.stringify({ message: 'Spam detected!' }),
-      };
-    }
-
-    // Anti-spam: Time-based check (at least 3 seconds)
-    formData.append('formTimestamp', pageLoadTime);
-    const now = Date.now();
-    const submissionTime = parseInt(data.formTimestamp, 10);
-    if (now - submissionTime < 3000) {
-      console.warn('Form submitted too quickly.');
-      return {
-        statusCode: 400,
-        body: JSON.stringify({
-          message: 'Form submitted too quickly. Please try again.',
-        }),
       };
     }
 
